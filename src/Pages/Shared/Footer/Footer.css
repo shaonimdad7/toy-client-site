@@ -1,3 +1,8 @@
 .footer_img {
-    width: 170px;
+    width: 140px;
+
+}
+
+.footer_img img {
+    margin-top: -20px;
 }
