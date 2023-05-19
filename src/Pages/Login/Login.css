@@ -4,7 +4,7 @@
     box-shadow: 0 1px 6px 1px #6a6a6a;
     margin-top: 40px;
     margin-bottom: 50px;
-    background-image: linear-gradient(to right, #c44c9c, #cf71b0, #f1e6ed);
+    background-image: linear-gradient(to right, #f1e6ed, #cf71b0, #c44c9c)
 }
 
 .btn_custom {

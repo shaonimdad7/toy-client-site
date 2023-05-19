@@ -6,7 +6,7 @@ import './Alldata.css'
 const AllData = () => {
     const [allDatas, setAllDatas] = useState([]);
     useEffect(() => {
-        fetch('Toy.json')
+        fetch('http://localhost:5000/items')
             .then(res => res.json())
             .then(data => setAllDatas(data));
     }, [])
