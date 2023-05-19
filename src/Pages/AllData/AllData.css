@@ -1,0 +1,17 @@
+.toys_custom {
+    font-family: playfair display, serif;
+    margin: 50px auto;
+    font-size: 35px;
+    width: 70%;
+}
+
+/* ------------------media css for mobile phone  -----------------*/
+@media (max-width: 575.98px) {
+    .toys_custom {
+        margin: 30px auto;
+        font-size: 30px;
+        width: 90%;
+        line-height: 40px;
+    }
+
+}

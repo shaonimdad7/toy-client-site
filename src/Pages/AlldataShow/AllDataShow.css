@@ -1,0 +1,17 @@
+.custom_css_container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.btn_custom {
+    background-color: #FF55BB;
+    border: none;
+    transition: .4s;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.btn_custom:hover {
+    background-color: #F7C8E0;
+    color: black;
+}
