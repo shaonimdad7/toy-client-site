@@ -1,17 +1,30 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Login.css'
 import img from '../../assets/signimg.jpg'
 import { Link } from 'react-router-dom';
 import { FaRegEyeSlash } from 'react-icons/fa';
 import { FaRegEye } from 'react-icons/fa';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 
 const Login = () => {
     const [show, setShow] = useState(false);
 
+    const { signIn } = useContext(AuthContext);
+
 
     const handleDataLogin = event => {
         event.preventDefault();
+        const form = event.target;
+        const password = form.password.value;
+        const email = form.email.value;
+        console.log(password, email)
+        signIn(email, password)
+            .then(resutl => {
+                const user = resutl.user;
+                console.log(user);
+            })
+            .catch(error => console.log(error));
 
     }
 
