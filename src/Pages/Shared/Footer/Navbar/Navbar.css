@@ -9,6 +9,18 @@
     font-family: playfair display, serif;
 }
 
+.navbar_name {
+    font-size: 22px;
+    font-family: playfair display, serif;
+    transition: .4s;
+    border: none;
+}
+
+.navbar_name:hover {
+    background-color: white;
+    border-radius: 8px;
+}
+
 /* ------------------media css for mobile phone  -----------------*/
 @media (max-width: 575.98px) {
     .navbar_img {

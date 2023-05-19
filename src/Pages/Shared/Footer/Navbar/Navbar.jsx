@@ -7,11 +7,12 @@ import './Navbar.css'
 
 const Navbar = () => {
     const navItems = <>
-        <li className='text-2xl'><Link to="/">Home</Link></li>
-        <li className='text-2xl'><Link to="/about">About Us</Link></li>
-        <li className='text-2xl'><Link to="/blog">Blog</Link></li>
-        <li className='text-2xl'><Link to="/alldata">All Data</Link></li>
-        <li className='text-2xl'><Link to="/login">Login</Link></li>
+        <li className='navbar_name'><Link to="/">Home</Link></li>
+        <li className='navbar_name'><Link to="/about">About Us</Link></li>
+        <li className='navbar_name'><Link to="/blog">Blog</Link></li>
+        <li className='navbar_name'><Link to="/alldata">All Data</Link></li>
+        <li className='navbar_name'><Link to="/login">Login</Link></li>
+        <li className='navbar_name'><Link to="/addtoy">Add Toy</Link></li>
     </>
     return (
         <div className='bg-pink-300 py-10 h-36 container_navbar'>

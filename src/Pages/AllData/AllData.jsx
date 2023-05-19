@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Alldatashow from '../AlldataShow/allDataShow';
+import Alldatashow from '../AlldataShow/AllDataShow';
 import './Alldata.css'
 
 
