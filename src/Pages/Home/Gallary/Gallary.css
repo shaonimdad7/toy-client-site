@@ -1,0 +1,62 @@
+.gallary_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin: 0 auto;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 20px;
+    box-shadow: 0 1px 6px 1px #6a6a6a;
+
+}
+
+.gallary_header {
+    font-family: playfair display, serif;
+    margin: 100px 0px 40px 0px;
+    font-size: 30px;
+}
+
+.para_container {
+    width: 350px;
+    font-family: playfair display, serif;
+    font-size: 17px;
+    gap: 10px;
+}
+
+.gallary_img {
+    height: 400px;
+}
+
+.gallary_img img {
+    height: 100%;
+}
+
+
+/* ------------------media css for mobile phone  -----------------*/
+@media (max-width: 575.98px) {
+    .gallary_container {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        margin: 0 auto;
+        gap: 10px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        padding: 10px;
+        box-shadow: 0 1px 6px 1px #6a6a6a;
+
+    }
+
+    .gallary_header {
+        margin: 40px 0px 30px 0px;
+        font-size: 25px;
+    }
+
+    .para_container {
+        width: 98%;
+        font-size: 17px;
+    }
+
+}
