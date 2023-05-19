@@ -12,7 +12,7 @@ const Navbar = () => {
         <li className='text-2xl'><Link to="/blog">Blog</Link></li>
     </>
     return (
-        <div className='bg-pink-300 py-10 h-36'>
+        <div className='bg-pink-300 py-10 h-36 container_navbar'>
             <div className="max-w-6xl mx-auto footer navbar bg-pink-300">
                 <div className="navbar-start">
                     <div className="dropdown">

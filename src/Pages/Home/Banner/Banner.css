@@ -1,0 +1,80 @@
+.custom_css {
+    height: 480px;
+}
+
+.linar_custom {
+    background-image: linear-gradient(to right, rgb(16 14 14 / 62%), rgb(16 14 14 / 62%));
+}
+
+.btn_carousol {
+    width: 80px;
+    border-radius: 8px;
+    background-color: #FF55BB;
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: .4s;
+}
+
+.btn_carousol:hover {
+    background-color: #F7C8E0;
+    color: black;
+}
+
+.custom_para {
+    margin-top: 140px;
+    font-family: playfair display, serif;
+}
+
+.custom_para h1 {
+    color: white;
+}
+
+.marquee_container {
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.616);
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* ------------------media css for mobile phone  -----------------*/
+@media (max-width: 575.98px) {
+
+    .custom_css {
+        height: 400px;
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+
+    .btn_carousol {
+        width: 60px;
+        font-size: 16px;
+        padding: 10px;
+        transition: .4s;
+        margin-top: -30px;
+    }
+
+    .custom_para {
+        margin-top: 30px;
+    }
+
+    .custom_para h1 {
+        color: white;
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .marquee_container {
+        width: 80%;
+        margin-top: 10px;
+        padding: 2px 8px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+
+}
