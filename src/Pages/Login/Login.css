@@ -1,0 +1,33 @@
+.custom_class {
+    width: 70%;
+    margin: 0 auto;
+    box-shadow: 0 1px 6px 1px #6a6a6a;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.btn_custom {
+    background-color: #c44c9c;
+    font-size: 22px;
+}
+
+.btn_custom:hover {
+    background-color: #cf84d3;
+}
+
+/* ------------------media css for mobile phone  -----------------*/
+@media (max-width: 575.98px) {
+
+    .custom_class {
+        width: 95%;
+        margin: 0 auto;
+        box-shadow: 0 1px 6px 1px #6a6a6a;
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+
+    .login_img img {
+        width: 100%;
+    }
+
+}

@@ -11,6 +11,7 @@ const Navbar = () => {
         <li className='text-2xl'><Link to="/about">About Us</Link></li>
         <li className='text-2xl'><Link to="/blog">Blog</Link></li>
         <li className='text-2xl'><Link to="/alldata">All Data</Link></li>
+        <li className='text-2xl'><Link to="/login">Login</Link></li>
     </>
     return (
         <div className='bg-pink-300 py-10 h-36 container_navbar'>
