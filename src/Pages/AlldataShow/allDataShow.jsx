@@ -12,7 +12,7 @@ const Alldatashow = ({ alldata }) => {
                 <h2 className="card-title">Shoes!</h2>
                 <p>If a dog chews shoes whose shoes does he choose?</p>
                 <div className="card-actions">
-                    <button className="btn btn-primary btn_custom">View Detials</button>
+                    <button className="btn btn-primary btn_custom_data">View Detials</button>
                 </div>
             </div>
         </div>

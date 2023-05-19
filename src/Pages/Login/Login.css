@@ -4,15 +4,24 @@
     box-shadow: 0 1px 6px 1px #6a6a6a;
     margin-top: 40px;
     margin-bottom: 50px;
+    background-image: linear-gradient(to right, #c44c9c, #cf71b0, #f1e6ed);
 }
 
 .btn_custom {
     background-color: #c44c9c;
-    font-size: 22px;
+    font-size: 21px;
+    border: none;
+    border-radius: 8px;
 }
 
 .btn_custom:hover {
     background-color: #cf84d3;
+}
+
+.hide_password_login {
+    right: 15px;
+    bottom: 12px;
+    font-size: 28px;
 }
 
 /* ------------------media css for mobile phone  -----------------*/

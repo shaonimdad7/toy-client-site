@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Login.css'
 import img from '../../assets/signimg.jpg'
+import { Link } from 'react-router-dom';
+import { FaRegEyeSlash } from 'react-icons/fa';
+import { FaRegEye } from 'react-icons/fa';
+
 
 const Login = () => {
+    const [show, setShow] = useState(false);
+
 
     const handleDataLogin = event => {
         event.preventDefault();
@@ -18,30 +24,36 @@ const Login = () => {
                     </div>
                     <div className="login_img card  w-full max-w-sm ">
                         <div className="card-body">
-                            <h1 className="text-5xl font-bold mb-4">SignUp here</h1>
+                            <h1 className="text-5xl font-bold mb-4">Login here</h1>
                             <form onSubmit={handleDataLogin}>
-                                <div className="form-control">
+                                {/* <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Name</span>
                                     </label>
                                     <input type="name" placeholder="name" name='name' className="input input-bordered" />
-                                </div>
+                                </div> */}
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Email</span>
                                     </label>
                                     <input type="text" placeholder="email" name='email' className="input input-bordered" />
                                 </div>
-                                <div className="form-control">
+                                <div className="form-control relative">
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
-                                    <input type="password" name='password' placeholder="password" className="input input-bordered" />
+                                    <input type={show ? "text" : "password"} name='password' placeholder="password" className="input input-bordered" />
+                                    <p onClick={() => setShow(!show)} className='hide_password_login absolute'><small>
+                                        {
+                                            show ? <span>  <FaRegEye /></span> : <span><FaRegEyeSlash /></span>
+                                        }
+                                    </small></p>
                                 </div>
                                 <div className="form-control mt-6">
-                                    <input type="submit" className="btn btn-primary btn_custom" value="Login" />
+                                    <input type="submit" className="btn btn-primary btn_custom" value="Log in" />
                                 </div>
                             </form>
+                            <p className='mt-4 text-center'>Are you new Here? <Link className='text-purple-500 font-bold' to="/signup">Sing Up</Link> </p>
                         </div>
                     </div>
                 </div>
