@@ -31,7 +31,7 @@ const SimpleSection = () => {
                 <div className='right_side space-y-5'>
                     <div className='right_side_single'>
                         <p className='heart'><FaQuoteLeft /></p>
-                        <div>
+                        <div className='customer_opinion'>
                             <p>Awesome theme, and very professional customer support! Im a very happy customer, thanks.</p>
                             <h3>- Jonathan row</h3>
                         </div>
@@ -41,7 +41,7 @@ const SimpleSection = () => {
                     </div>
                     <div className='right_side_single'>
                         <p className='heart'> <FaQuoteLeft /></p>
-                        <div>
+                        <div className='customer_opinion'>
                             <p>Really nice, clean and good looking Template. Easy to set up if you read the documentation</p>
                             <h3>- Marry charles</h3>
                         </div>
@@ -51,7 +51,7 @@ const SimpleSection = () => {
                     </div>
                     <div className='right_side_single'>
                         <p className='heart'> <FaQuoteLeft /></p>
-                        <div>
+                        <div className='customer_opinion'>
                             <p>Really nice, clean and good looking Template. Easy to set up if you read the documentation</p>
                             <h3>- Katy Perry</h3>
                         </div>

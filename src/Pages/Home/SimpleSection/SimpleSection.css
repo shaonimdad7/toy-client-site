@@ -5,13 +5,12 @@
     justify-content: center;
     gap: 40px;
     margin-top: 50px;
+    margin-bottom: 50px;
     box-shadow: 0 1px 6px 1px #6a6a6a;
     border-radius: 10px;
     padding: 70px 50px;
     font-family: playfair display, serif;
-    background-image: linear-gradient(to right, #f7f5f6, #ffc4ed, #ff9edf);
-
-
+    background-image: linear-gradient(to right, #f7f5f6, #e1c3d8, #fbd4ee, #f5b2de);
 }
 
 .simple_header {
@@ -68,4 +67,67 @@
     background-color: black;
     color: white;
     border: none;
+}
+
+
+/* ------------------media css for mobile phone  -----------------*/
+@media (max-width: 575.98px) {
+    .simple_container {
+        width: 96%;
+        gap: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 10px 10px;
+        flex-direction: column;
+    }
+
+    .simple_header {
+        margin: 20px;
+        font-size: 25px;
+    }
+
+    .left_side {
+        margin-left: 20px;
+        margin-top: 20px;
+
+    }
+
+    .right_side {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .right_side_single {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 20px;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to right, #f1e6ed, #cf71b0, #c44c9c);
+        box-shadow: 0 1px 6px 1px #6a6a6a;
+    }
+
+    .customer_photo {
+        width: 150px;
+    }
+
+    .customer_photo img {
+        width: 100%;
+    }
+
+    .heart {
+        font-size: 30px;
+        margin-right: 10px;
+    }
+
+    .customer_opinion {
+        text-align: center;
+        margin: 10px 0px;
+    }
+
+    .customer_feed {
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
 }

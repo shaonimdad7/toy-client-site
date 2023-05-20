@@ -43,11 +43,14 @@
 
     .add_container {
         width: 96%;
-        flex-direction: column;
         margin-top: 40px;
         margin-bottom: 50px;
         padding: 0px;
         gap: 0px;
+    }
+
+    .form_container {
+        flex-direction: column;
     }
 
     .mobile_css {

@@ -72,4 +72,23 @@
         height: 230px;
     }
 
+    .info_container {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .user_info {
+        margin-left: 20px;
+    }
+
+    .user_img {
+        width: 80px;
+    }
+
+    .user_img img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+
 }

@@ -48,7 +48,7 @@ const AddItem = () => {
             <div>
                 <form onSubmit={handleAddToy}>
                     <div className='add_container'>
-                        <div className=' flex'>
+                        <div className=' flex form_container'>
                             <div className="card-body body_part space-y-2">
                                 <div className="form-control">
                                     <label className="label">

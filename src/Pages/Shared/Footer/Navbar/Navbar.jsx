@@ -48,7 +48,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     <div className='info_container'>
-                        {user && <div>
+                        {user && <div className='user_info'>
                             <div className="avatar">
                                 <div className="w-28 rounded-full user_img">
                                     <img src={user?.photoURL} />
