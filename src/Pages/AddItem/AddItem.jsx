@@ -1,6 +1,7 @@
 import React from 'react';
 import './AddItem.css'
 import Swal from 'sweetalert2'
+import { Link } from 'react-router-dom';
 
 const AddItem = () => {
 
@@ -106,6 +107,7 @@ const AddItem = () => {
                         </div>
                     </div>
                 </form>
+
             </div>
         </div>
     );

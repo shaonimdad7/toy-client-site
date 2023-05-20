@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Alldatashow from '../AlldataShow/AllDataShow';
 import './Alldata.css'
+import Alldatashow from '../AlldataShow/allDataShow';
 
 
 const AllData = () => {
