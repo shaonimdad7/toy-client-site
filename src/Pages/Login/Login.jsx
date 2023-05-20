@@ -39,12 +39,6 @@ const Login = () => {
                         <div className="card-body">
                             <h1 className="text-5xl font-bold mb-4">Login here</h1>
                             <form onSubmit={handleDataLogin}>
-                                {/* <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Name</span>
-                                    </label>
-                                    <input type="name" placeholder="name" name='name' className="input input-bordered" />
-                                </div> */}
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Email</span>

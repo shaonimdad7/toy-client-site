@@ -1,0 +1,72 @@
+.add_container {
+    width: 70%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding: 30px;
+    gap: 10px;
+    font-family: playfair display, serif;
+    box-shadow: 0 1px 6px 1px #6a6a6a;
+}
+
+.additem_header {
+    margin-top: 50px;
+    color: #c44c9c;
+    font-size: 40px;
+    font-family: playfair display, serif;
+}
+
+.custom_font {
+    font-size: 19px;
+}
+
+.btn_alltoy {
+    width: 50%;
+    margin: 0 auto;
+    margin-left: 200px;
+    background-color: #c44c9c;
+    font-size: 21px;
+    border: none;
+    border-radius: 8px;
+    transition: .4s;
+}
+
+.btn_alltoy:hover {
+    background-color: #e16ee7;
+    color: black;
+}
+
+/* ------------------media css for mobile phone  -----------------*/
+@media (max-width: 575.98px) {
+
+    .add_container {
+        width: 96%;
+        flex-direction: column;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        padding: 0px;
+        gap: 0px;
+    }
+
+    .mobile_css {
+        margin-top: -45px;
+    }
+
+    .custom_font {
+        font-size: 17px;
+    }
+
+    .btn_alltoy {
+        width: 150px;
+        margin-left: 35px;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .additem_header {
+        margin-top: 40px;
+        font-size: 30px;
+    }
+}
