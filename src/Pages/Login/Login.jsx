@@ -5,12 +5,15 @@ import { Link } from 'react-router-dom';
 import { FaRegEyeSlash } from 'react-icons/fa';
 import { FaRegEye } from 'react-icons/fa';
 import { AuthContext } from '../../Provider/AuthProvider';
+import { FaGoogle } from 'react-icons/fa';
+import { signInWithPopup } from 'firebase/auth';
 
 
 const Login = () => {
     const [show, setShow] = useState(false);
+    const [newuser, setNewUser] = useState(null)
 
-    const { signIn } = useContext(AuthContext);
+    const { signIn, signInWithGoogle } = useContext(AuthContext);
 
 
     const handleDataLogin = event => {
@@ -22,10 +25,25 @@ const Login = () => {
         signIn(email, password)
             .then(resutl => {
                 const user = resutl.user;
+                form.reset();
                 console.log(user);
             })
             .catch(error => console.log(error));
 
+    }
+
+    const handleWithGoogleSignIn = () => {
+        console.log('google mama')
+        signInWithGoogle()
+            .then(result => {
+                const newuser = result.user;
+                console.log(newuser);
+                setNewUser(newuser);
+                // navigate(from, { replace: true })
+            })
+            .catch(error => {
+                console.log(error);
+            })
     }
 
     return (
@@ -60,7 +78,11 @@ const Login = () => {
                                     <input type="submit" className="btn btn-primary btn_custom" value="Log in" />
                                 </div>
                             </form>
-                            <p className='mt-4 text-center'>Are you new Here? <Link className='text-purple-500 font-bold' to="/signup">Sing Up</Link> </p>
+                            <p className='mt-4 text-center'>Are you new Here? <Link className='text-black font-bold' to="/signup">Sing Up</Link> </p>
+                            <button onClick={handleWithGoogleSignIn} className='btn btn_custom'> Sign Up With <span className='ml-3'><FaGoogle /> </span></button>
+                            {newuser && <div>
+                                <h3>user: {newuser?.displayName}</h3>
+                            </div>}
                         </div>
                     </div>
                 </div>

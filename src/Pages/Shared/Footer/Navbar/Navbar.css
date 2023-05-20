@@ -4,6 +4,11 @@
     height: 120px;
 }
 
+.navbar_custom_cdd {
+    margin-right: 170px;
+    border: 1px solid black;
+}
+
 .navbar_img p {
     top: 110px;
     font-family: playfair display, serif;
@@ -19,6 +24,25 @@
 .navbar_name:hover {
     background-color: white;
     border-radius: 8px;
+}
+
+.container_navbar {
+    min-height: 200px;
+}
+
+.user_img img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.info_container {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.user_name {
+    font-size: 18px;
 }
 
 /* ------------------media css for mobile phone  -----------------*/

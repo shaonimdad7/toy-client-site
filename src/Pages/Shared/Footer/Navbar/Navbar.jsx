@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import img from '../../../../assets/barbie.png'
 import { Link } from 'react-router-dom';
 import './Navbar.css'
+import { AuthContext } from '../../../../Provider/AuthProvider';
 
 
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext)
     const navItems = <>
         <li className='navbar_name'><Link to="/">Home</Link></li>
         <li className='navbar_name'><Link to="/about">About Us</Link></li>
@@ -37,7 +39,18 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <button className="btn btn-secondary">Button</button>
+                    <div className='info_container'>
+                        {user && <div>
+                            <div className="avatar">
+                                <div className="w-28 rounded-full user_img">
+                                    <img src={user?.photoURL} />
+                                </div>
+                            </div>
+                            <h3 className=' user_name'> {user?.displayName}</h3>
+                            {/* <h3 className=' user_name'> {user?.email}</h3> */}
+                        </div>}
+
+                    </div>
                 </div>
             </div>
         </div>

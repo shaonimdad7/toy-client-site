@@ -8,14 +8,16 @@
 }
 
 .btn_custom {
-    background-color: #c44c9c;
-    font-size: 21px;
+    background-color: #f004a1;
+    font-size: 18px;
     border: none;
     border-radius: 8px;
+    transition: .4s;
 }
 
 .btn_custom:hover {
-    background-color: #cf84d3;
+    background-color: white;
+    color: black;
 }
 
 .hide_password_login {
