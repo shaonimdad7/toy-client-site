@@ -8,16 +8,24 @@ import { AuthContext } from '../../../../Provider/AuthProvider';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
+    const handleLogOut = () => {
+        logOut()
+            .then(result => {
+
+            })
+            .catch(error => console.error(error));
+    }
     const navItems = <>
-        <li className='navbar_name'><Link to="/">Home</Link></li>
+        <li className='navbar_name'><Link to="/home">Home</Link></li>
         <li className='navbar_name'><Link to="/about">About Us</Link></li>
         <li className='navbar_name'><Link to="/blog">Blog</Link></li>
-        <li className='navbar_name'><Link to="/alldata">All Data</Link></li>
+        <li className='navbar_name'><Link to="/alldata">All Data</Link> </li>
         <li className='navbar_name'><Link to="/login">Login</Link></li>
         <li className='navbar_name'><Link to="/addtoy">Add Toy</Link></li>
+        <li className='navbar_name'><Link to="/mytoys">My Toys</Link></li>
     </>
     return (
-        <div className='bg-pink-300 py-10 h-36 container_navbar'>
+        <div className='bg-pink-300 pt-10 container_navbar'>
             <div className="max-w-6xl mx-auto footer navbar bg-pink-300">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -47,7 +55,8 @@ const Navbar = () => {
                                 </div>
                             </div>
                             <h3 className=' user_name'> {user?.displayName}</h3>
-                            {/* <h3 className=' user_name'> {user?.email}</h3> */}
+                            <p className=' user_name'> {user?.email}</p>
+                            <button className='btn_nav mt-2' onClick={handleLogOut}>Log Out</button>
                         </div>}
 
                     </div>

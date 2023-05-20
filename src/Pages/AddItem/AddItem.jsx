@@ -12,12 +12,12 @@ const AddItem = () => {
         const name = form.name.value;
         const img = form.img.value;
         const sellerName = form.sellerName.value;
-        const sellerEmail = form.sellerEmail.value;
+        const email = form.email.value;
         const price = form.price.value;
         const rating = form.rating.value;
         const description = form.description.value;
         const product = form.product.value;
-        const newToyItem = { name, img, sellerName, sellerEmail, price, rating, description, product };
+        const newToyItem = { name, img, sellerName, email, price, rating, description, product };
         console.log(newToyItem)
 
         fetch('http://localhost:5000/items', {
@@ -72,7 +72,7 @@ const AddItem = () => {
                                     <label className="label">
                                         <span className="label-text custom_font">Seller Email</span>
                                     </label>
-                                    <input type="email" placeholder="Seller Email" name='sellerEmail' className="input input-bordered" />
+                                    <input type="email" placeholder="Seller Email" name='email' className="input input-bordered" />
                                 </div>
                             </div>
                             <div className="card-body body_part space-y-2 mobile_css">

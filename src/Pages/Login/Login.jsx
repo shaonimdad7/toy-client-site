@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import './Login.css'
 import img from '../../assets/signimg.jpg'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaRegEyeSlash } from 'react-icons/fa';
 import { FaRegEye } from 'react-icons/fa';
 import { AuthContext } from '../../Provider/AuthProvider';
@@ -12,6 +12,10 @@ import { signInWithPopup } from 'firebase/auth';
 const Login = () => {
     const [show, setShow] = useState(false);
     const [newuser, setNewUser] = useState(null)
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const from = location.state?.from?.pathname || '/home';
 
     const { signIn, signInWithGoogle } = useContext(AuthContext);
 
@@ -26,6 +30,7 @@ const Login = () => {
             .then(resutl => {
                 const user = resutl.user;
                 form.reset();
+                navigate(from, { replace: true })
                 console.log(user);
             })
             .catch(error => console.log(error));
@@ -38,6 +43,7 @@ const Login = () => {
             .then(result => {
                 const newuser = result.user;
                 console.log(newuser);
+                navigate(from, { replace: true })
                 setNewUser(newuser);
                 // navigate(from, { replace: true })
             })

@@ -4,11 +4,6 @@
     height: 120px;
 }
 
-.navbar_custom_cdd {
-    margin-right: 170px;
-    border: 1px solid black;
-}
-
 .navbar_img p {
     top: 110px;
     font-family: playfair display, serif;
@@ -43,6 +38,21 @@
 
 .user_name {
     font-size: 18px;
+}
+
+.btn_nav {
+    border-radius: 8px;
+    background-color: #f004a1;
+    border: none;
+    font-size: 17px;
+    color: white;
+    padding: 10px 20px;
+    transition: .4s;
+}
+
+.btn_nav:hover {
+    background-color: white;
+    color: black;
 }
 
 /* ------------------media css for mobile phone  -----------------*/
