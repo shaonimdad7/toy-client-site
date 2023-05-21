@@ -17,7 +17,6 @@ const Navbar = () => {
     }
     const navItems = <>
         <li className='navbar_name'><Link to="/home">Home</Link></li>
-        <li className='navbar_name'><Link to="/about">About Us</Link></li>
         <li className='navbar_name'><Link to="/blog">Blog</Link></li>
         <li className='navbar_name'><Link to="/alldata">All Data</Link> </li>
         <li className='navbar_name'><Link to="/addtoy">Add Toy</Link></li>
@@ -25,8 +24,8 @@ const Navbar = () => {
         <li className='navbar_name'><Link to="/login">Login</Link></li>
     </>
     return (
-        <div className='bg-pink-300 pt-10 container_navbar'>
-            <div className="max-w-6xl mx-auto footer navbar bg-pink-300">
+        <div className='bg-pink-200 pt-8 pb-3 container_navbar'>
+            <div className="max-w-6xl mx-auto footer navbar bg-pink-200">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
