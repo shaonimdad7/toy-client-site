@@ -1,11 +1,11 @@
 import React from 'react';
 import './ShowMyToys.css'
 import { FaTimes } from 'react-icons/fa';
-import { FaRegCheckCircle } from 'react-icons/fa';
-import Swal from 'sweetalert2'
+import { FaRegQuestionCircle } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 
-const ShowMyToys = ({ mytoy, handleDeleteToy }) => {
+const ShowMyToys = ({ mytoy, handleDeleteToy, handleUpdated }) => {
     const { _id, img, name, subCategory, price, available, rating, sellerName } = mytoy;
 
 
@@ -40,10 +40,12 @@ const ShowMyToys = ({ mytoy, handleDeleteToy }) => {
                 <p>{subCategory}</p>
             </th>
             <th>
-                <button onClick={() => handleDeleteToy(_id)} className="btn btn_show_data"> <FaTimes> </FaTimes></button>
+                <button onClick={() => handleDeleteToy(_id)} className="btn btn_show_data"> <FaTimes> </FaTimes> </button>
             </th>
             <th>
-                <button className="btn btn_show_data"> <FaRegCheckCircle> </FaRegCheckCircle></button>
+                <Link to={`/updated/${_id}`}>
+                    <button onClick={() => handleUpdated(_id)} className="btn btn_show_data"> <FaRegQuestionCircle> </FaRegQuestionCircle></button>
+                </Link>
             </th>
         </tr>
     );

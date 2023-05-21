@@ -4,3 +4,20 @@
     margin-top: 60px;
     margin-bottom: 50px;
 }
+
+.mytoys_header {
+    text-align: center;
+    margin-top: 50px;
+    font-family: playfair display, serif;
+    font-size: 35px;
+    color: #c44c9c;
+}
+
+/* ------------------media css for mobile phone  -----------------*/
+@media (max-width: 575.98px) {
+    .mytoys_header {
+        margin-top: 40px;
+        font-size: 25px;
+    }
+
+}

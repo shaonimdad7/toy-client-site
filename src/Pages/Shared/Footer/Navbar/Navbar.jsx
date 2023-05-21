@@ -36,17 +36,19 @@ const Navbar = () => {
                             {navItems}
                         </ul>
                     </div>
-                    <Link to="/" className="navbar_img relative text-xl">
-                        <img src={img} alt="" />
-                        <p className='absolute'>Princeess Paradise</p>
-                    </Link>
+                    <div>
+                        <Link to="/" className="navbar_img relative text-xl">
+                            <img src={img} alt="" />
+                            <p className='absolute'>Princeess Paradise</p>
+                        </Link>
+                    </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         {navItems}
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end ">
                     <div className='info_container'>
                         {user && <div className='user_info'>
                             <div className="avatar">
