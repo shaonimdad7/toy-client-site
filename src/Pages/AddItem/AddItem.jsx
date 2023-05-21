@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../Provider/AuthProvider';
 import './AddItem.css'
 import Swal from 'sweetalert2'
 import { Link } from 'react-router-dom';
 
 const AddItem = () => {
+    const { user } = useContext(AuthContext)
 
     const handleAddToy = event => {
         event.preventDefault();
@@ -56,7 +58,7 @@ const AddItem = () => {
                                     <label className="label">
                                         <span className="label-text custom_font">Name</span>
                                     </label>
-                                    <input type="text" placeholder="name" name='name' className="input input-bordered" />
+                                    <input type="text" placeholder="name" name='name' className="input input-bordered " required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
@@ -68,13 +70,13 @@ const AddItem = () => {
                                     <label className="label">
                                         <span className="label-text custom_font">Seller Name</span>
                                     </label>
-                                    <input type="text" placeholder="Seller Name" name='sellerName' className="input input-bordered" />
+                                    <input type="text" defaultValue={user?.displayName} placeholder="Seller Name" name='sellerName' className="input input-bordered" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text custom_font">Seller Email</span>
                                     </label>
-                                    <input type="email" placeholder="Seller Email" name='email' className="input input-bordered" />
+                                    <input type="email" defaultValue={user?.email} placeholder="Seller Email" name='email' className="input input-bordered" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
@@ -88,7 +90,7 @@ const AddItem = () => {
                                     <label className="label">
                                         <span className="label-text custom_font">Price</span>
                                     </label>
-                                    <input type="text" placeholder="Price" name='price' className="input input-bordered" />
+                                    <input type="text" placeholder="Price" name='price' className="input input-bordered" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
@@ -112,7 +114,8 @@ const AddItem = () => {
                                     <label className="label">
                                         <span className="label-text custom_font">Sub Category</span>
                                     </label>
-                                    <input type="text" placeholder="Sub Category" name='subCategory' className="input input-bordered" />
+
+                                    <input type="text" placeholder="barbie doll or music or doctor" name='subCategory' className="input input-bordered" />
                                 </div>
                             </div>
                         </div>

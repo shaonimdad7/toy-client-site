@@ -1,9 +1,15 @@
 import React from 'react';
 import './ShowMyToys.css'
 import { FaTimes } from 'react-icons/fa';
+import { FaRegCheckCircle } from 'react-icons/fa';
+import Swal from 'sweetalert2'
 
-const ShowMyToys = ({ mytoy }) => {
-    const { img, name, subCategory, price, available, rating, sellerName } = mytoy
+
+const ShowMyToys = ({ mytoy, handleDeleteToy }) => {
+    const { _id, img, name, subCategory, price, available, rating, sellerName } = mytoy;
+
+
+
     return (
         <tr>
             {/* <th>
@@ -34,7 +40,10 @@ const ShowMyToys = ({ mytoy }) => {
                 <p>{subCategory}</p>
             </th>
             <th>
-                <button className="btn btn_show_data"> <FaTimes> </FaTimes></button>
+                <button onClick={() => handleDeleteToy(_id)} className="btn btn_show_data"> <FaTimes> </FaTimes></button>
+            </th>
+            <th>
+                <button className="btn btn_show_data"> <FaRegCheckCircle> </FaRegCheckCircle></button>
             </th>
         </tr>
     );
