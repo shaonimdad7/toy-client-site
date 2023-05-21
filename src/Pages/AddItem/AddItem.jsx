@@ -17,7 +17,9 @@ const AddItem = () => {
         const rating = form.rating.value;
         const description = form.description.value;
         const product = form.product.value;
-        const newToyItem = { name, img, sellerName, email, price, rating, description, product };
+        const available = form.available.value;
+        const subCategory = form.subCategory.value;
+        const newToyItem = { name, img, sellerName, email, price, rating, description, product, available, subCategory };
         console.log(newToyItem)
 
         fetch('http://localhost:5000/items', {
@@ -74,6 +76,12 @@ const AddItem = () => {
                                     </label>
                                     <input type="email" placeholder="Seller Email" name='email' className="input input-bordered" />
                                 </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text custom_font">Available Quantity</span>
+                                    </label>
+                                    <input type="text" placeholder="Quantity" name='available' className="input input-bordered" />
+                                </div>
                             </div>
                             <div className="card-body body_part space-y-2 mobile_css">
                                 <div className="form-control">
@@ -99,6 +107,12 @@ const AddItem = () => {
                                         <span className="label-text custom_font">Say Something About the Product</span>
                                     </label>
                                     <input type="text" placeholder="product" name='product' className="input input-bordered" />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text custom_font">Sub Category</span>
+                                    </label>
+                                    <input type="text" placeholder="Sub Category" name='subCategory' className="input input-bordered" />
                                 </div>
                             </div>
                         </div>

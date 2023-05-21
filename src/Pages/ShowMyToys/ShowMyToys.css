@@ -1,0 +1,7 @@
+.btn_show_data {
+    border-radius: 50%;
+    border: none;
+    font-size: 15px;
+    background-color: #db74b9;
+    transition: .4s;
+}

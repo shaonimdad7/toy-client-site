@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaRegEyeSlash } from 'react-icons/fa';
 import { FaQuoteLeft } from 'react-icons/fa';
 import img1 from '../../../assets/you.png'
 import img2 from '../../../assets/slide_img3.png'

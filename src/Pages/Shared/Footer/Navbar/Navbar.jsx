@@ -20,9 +20,9 @@ const Navbar = () => {
         <li className='navbar_name'><Link to="/about">About Us</Link></li>
         <li className='navbar_name'><Link to="/blog">Blog</Link></li>
         <li className='navbar_name'><Link to="/alldata">All Data</Link> </li>
-        <li className='navbar_name'><Link to="/login">Login</Link></li>
         <li className='navbar_name'><Link to="/addtoy">Add Toy</Link></li>
         <li className='navbar_name'><Link to="/mytoys">My Toys</Link></li>
+        <li className='navbar_name'><Link to="/login">Login</Link></li>
     </>
     return (
         <div className='bg-pink-300 pt-10 container_navbar'>
