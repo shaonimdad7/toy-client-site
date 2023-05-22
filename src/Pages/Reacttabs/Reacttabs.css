@@ -1,25 +1,49 @@
+.tabs_header {
+    text-align: center;
+    margin-top: 80px;
+    font-family: playfair display, serif;
+    font-size: 35px;
+}
+
+.custom_margin {}
+
 .tablist {
     display: flex;
     gap: 20px;
     width: 80%;
     margin: 0 auto;
     justify-content: space-around;
-    align-items: center;
     box-shadow: 0 1px 6px 1px #6a6a6a;
+    margin-bottom: 20px;
+    align-items: center;
     padding: 20px;
+    font-size: 22px;
+    font-family: playfair display, serif;
+    border-radius: 10px;
+    background-color: #e994cd;
+
 }
 
 .tabpanellist {
-
     width: 80%;
     margin: 0 auto;
     box-shadow: 0 1px 6px 1px #6a6a6a;
     padding: 20px;
+    border-radius: 10px;
 }
 
 .singleTab {
     width: 200px;
-    padding: 10px;
+    padding: 15px 13px;
+    background-color: #f17bca;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.singleTab:hover {
+    background-color: rgb(116, 94, 98);
+    color: white;
 }
 
 .custom_card {
@@ -27,5 +51,58 @@
 }
 
 .custom_margin {
-    margin-top: 80px;
+    margin-top: 50px;
+}
+
+.btn_buy {
+    background-color: #e745b1;
+    border: none;
+    border-radius: 10px;
+    transition: .4s;
+}
+
+.btn_buy:hover {
+    background-color: black;
+}
+
+/* ------------------media css for mobile phone  -----------------*/
+@media (max-width: 575.98px) {
+    .tabs_header {
+        margin-top: 40px;
+        font-size: 25px;
+    }
+
+    .tablist {
+        display: flex;
+        gap: 10px;
+        width: 96%;
+        margin-bottom: 20px;
+        padding: 15px 5px;
+        font-size: 17px;
+        border-radius: 8px;
+
+    }
+
+    .tabpanellist {
+        width: 96%;
+        padding: 0px 0px;
+        border-radius: 8px;
+    }
+
+    .singleTab {
+        width: 100px;
+        padding: 8px 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: .4s;
+    }
+
+    .singleTab:hover {
+        background-color: rgb(116, 94, 98);
+        color: white;
+    }
+
+    .custom_margin {
+        margin-top: 50px;
+    }
 }

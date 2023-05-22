@@ -19,7 +19,7 @@ const UpdatedToy = () => {
         const UpdatedItems = { name, price, description, available, subCategory };
         console.log(UpdatedItems)
 
-        fetch(`http://localhost:5000/items/${_id}`, {
+        fetch(`https://b7a11-toy-marketplace-server-side-shaonimdad7.vercel.app/items/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -67,9 +67,9 @@ const UpdatedToy = () => {
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
-                                            <span className="label-text custom_font">{price}</span>
+                                            <span className="label-text custom_font">Price</span>
                                         </label>
-                                        <input type="text" defaultValue={price} placeholder="Price" name='price' className="input input-bordered" required />
+                                        <input type="text" defaultValue={price} placeholder="Price" name='price' className="input input-bordered" />
                                     </div>
                                 </div>
                                 <div className="card-body body_part space-y-2 mobile_css">
@@ -87,7 +87,7 @@ const UpdatedToy = () => {
                                         <input type="text" defaultValue={subCategory} placeholder="barbie doll or music or doctor" name='subCategory' className="input input-bordered" />
                                     </div>
                                     <div className=''>
-                                        <input type="submit" value="Add Toy" className='btn_updated' />
+                                        <input type="submit" value="Updated Toy" className='btn_updated' />
                                     </div>
                                 </div>
                             </div>

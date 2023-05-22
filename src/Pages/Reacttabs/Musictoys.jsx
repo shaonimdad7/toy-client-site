@@ -12,6 +12,9 @@ const Musictoys = ({ musicToy }) => {
                 <p>{price}</p>
                 <p>{available}</p>
             </div>
+            <div>
+                <button className='btn btn_buy'>Buy Now</button>
+            </div>
         </div>
 
     );

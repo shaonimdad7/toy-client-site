@@ -6,7 +6,7 @@ import Alldatashow from '../AlldataShow/allDataShow';
 const AllData = () => {
     const [allDatas, setAllDatas] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/items')
+        fetch('https://b7a11-toy-marketplace-server-side-shaonimdad7.vercel.app/items')
             .then(res => res.json())
             .then(data => setAllDatas(data));
     }, [])

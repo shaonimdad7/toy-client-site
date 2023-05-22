@@ -24,9 +24,9 @@ const Navbar = () => {
         <li className='navbar_name'><Link to="/login">Login</Link></li>
     </>
     return (
-        <div className='bg-pink-200 pt-8 pb-3 container_navbar'>
-            <div className="max-w-6xl mx-auto footer navbar bg-pink-200">
-                <div className="navbar-start">
+        <div className=' pt-8 pb-3 container_navbar'>
+            <div className="max-w-6xl mx-auto footer navbar ">
+                <div className="navbar-start mb-4">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -36,7 +36,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div>
-                        <Link to="/" className="navbar_img relative text-xl">
+                        <Link to="/home" className="navbar_img relative text-xl">
                             <img src={img} alt="" />
                             <p className='absolute'>Princeess Paradise</p>
                         </Link>

@@ -22,7 +22,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'alldata',
-                element: <PrivateRoute><AllData></AllData></PrivateRoute>
+                element: <AllData></AllData>
             },
             {
                 path: 'login',
@@ -34,8 +34,8 @@ const router = createBrowserRouter([
             },
             {
                 path: 'viewdetails/:id',
-                element: <ViewDetails></ViewDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/items/${params.id}`)
+                element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://b7a11-toy-marketplace-server-side-shaonimdad7.vercel.app/items/${params.id}`)
 
             },
             {
@@ -48,13 +48,14 @@ const router = createBrowserRouter([
             },
             {
                 path: 'mytoys',
-                element: <PrivateRoute> <MyToys></MyToys></PrivateRoute>
+                element: <PrivateRoute> <MyToys></MyToys></PrivateRoute>,
+                // loader: ({ params }) => fetch(`https://b7a11-toy-marketplace-server-side-shaonimdad7.vercel.app/items/${params.id}`)
 
             },
             {
                 path: 'updated/:id',
                 element: <PrivateRoute><UpdatedToy></UpdatedToy></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/items/${params.id}`)
+                loader: ({ params }) => fetch(`https://b7a11-toy-marketplace-server-side-shaonimdad7.vercel.app/items/${params.id}`)
             }
         ]
     },
