@@ -8,11 +8,17 @@ const MyToys = () => {
     const { user } = useContext(AuthContext);
     const [mytoys, setMytoys] = useState([]);
 
+    // useEffect(() => {
+    //     fetch(`https://b7a11-toy-marketplace-server-side-shaonimdad7.vercel.app/items?email=${user.email}`)
+    //         .then(res => res.json())
+    //         .then(data => setMytoys(data));
+    // }, [user]);
     useEffect(() => {
-        fetch(`https://b7a11-toy-marketplace-server-side-shaonimdad7.vercel.app/items?email=${user.email}`)
+        fetch(`https://b7a11-toy-marketplace-server-side-shaonimdad7.vercel.app/items/email/${user?.email}`)
             .then(res => res.json())
             .then(data => setMytoys(data));
     }, [user]);
+
 
 
     const handleDeleteToy = id => {
@@ -38,29 +44,10 @@ const MyToys = () => {
         }
     };
 
-    // const handleUpdated = id => {
-    //     fetch(`https://b7a11-toy-marketplace-server-side-shaonimdad7.vercel.app/items/${_id}`, {
-    //         method: 'PUT',
-    //         headers: {
-    //             'content-type': 'application/json'
-    //         },
-    //         body: JSON.stringify({ status: 'Updated' })
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data);
-    //             if (data.modifiedCount > 0) {
-    //                 const remaining = mytoys.filter(mytoy => mytoy._id === id);
-    //                 const updated = mytoys.find(mytoy => mytoy._id === id);
-    //                 updated.status = 'updated';
-    //                 const updatedToys = [updated, ...remaining];
-    //                 setMytoys(updatedToys);
-    //             }
-    //         });
-    // };
 
     return (
         <div>
+
             <h3 className="mytoys_header">All of your Toys are here, Have a look at them </h3>
             <div className="mytoy_container">
                 <div className="overflow-x-auto w-full">

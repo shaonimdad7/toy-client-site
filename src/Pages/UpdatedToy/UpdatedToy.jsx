@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from "react-router-dom";
 import './UpdatedToy.css'
 import Swal from 'sweetalert2';
@@ -6,6 +6,11 @@ import Swal from 'sweetalert2';
 const UpdatedToy = () => {
     const toys = useLoaderData()
     const { _id, description, price, available, subCategory, name } = toys;
+    const [selectedOption, setSelectedOption] = useState('');
+
+    const handleChange = (event) => {
+        setSelectedOption(event.target.value);
+    };
 
     const handleUpdatedToy = event => {
         event.preventDefault();
@@ -83,8 +88,15 @@ const UpdatedToy = () => {
                                         <label className="label">
                                             <span className="label-text custom_font">Sub Category</span>
                                         </label>
-
-                                        <input type="text" defaultValue={subCategory} placeholder="barbie doll or music or doctor" name='subCategory' className="input input-bordered" />
+                                        <select value={selectedOption} onChange={handleChange} name="subCategory" className="input input-bordered">
+                                            <option value="">Select a sub category</option>
+                                            <option value="barbie doll">Barbie Doll</option>
+                                            <option value="music">Music</option>
+                                            <option value="doctor">Doctor</option>
+                                        </select>
+                                        {selectedOption && (
+                                            <p className='mt-2'>You have selected: <span className='text-pink-600'>{selectedOption}</span></p>
+                                        )}
                                     </div>
                                     <div className=''>
                                         <input type="submit" value="Updated Toy" className='btn_updated' />

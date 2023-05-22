@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import './AddItem.css'
 import Swal from 'sweetalert2'
@@ -6,6 +6,11 @@ import Swal from 'sweetalert2'
 
 const AddItem = () => {
     const { user } = useContext(AuthContext)
+    const [selectedOption, setSelectedOption] = useState('');
+
+    const handleChange = (event) => {
+        setSelectedOption(event.target.value);
+    };
 
     const handleAddToy = event => {
         event.preventDefault();
@@ -110,13 +115,22 @@ const AddItem = () => {
                                     </label>
                                     <input type="text" placeholder="product" name='product' className="input input-bordered" />
                                 </div>
+
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text custom_font">Sub Category</span>
                                     </label>
-
-                                    <input type="text" placeholder="barbie doll or music or doctor" name='subCategory' className="input input-bordered" />
+                                    <select value={selectedOption} onChange={handleChange} name="subCategory" className="input input-bordered">
+                                        <option value="">Select a sub category</option>
+                                        <option value="barbie doll">Barbie Doll</option>
+                                        <option value="music">Music</option>
+                                        <option value="doctor">Doctor</option>
+                                    </select>
+                                    {selectedOption && (
+                                        <p className='mt-2'>You have selected: <span className='text-pink-600'>{selectedOption}</span></p>
+                                    )}
                                 </div>
+
                             </div>
                         </div>
                         <div className='custom_btn'>
